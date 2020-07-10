@@ -11,9 +11,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
-import com.allenliu.versionchecklib.v2.AllenVersionChecker;
-import com.allenliu.versionchecklib.v2.builder.UIData;
-import com.allenliu.versionchecklib.v2.callback.RequestVersionListener;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -33,38 +30,38 @@ public class UpdateHelper {
     public void checkUpdate() {
         String apkPath = activity.getExternalFilesDir("") + File.separator;
         Log.e(TAG, "checkUpdateListener: apk path: " + apkPath);
-        AllenVersionChecker
-                .getInstance()
-                .requestVersion()
-                .setRequestUrl(REQUEST_URL)
-                .request(new RequestVersionListener() {
-                    @Override
-                    public UIData onRequestVersionSuccess(String result) {
-                        entry = new Gson().fromJson(result, Entry.class);
-                        Log.d(TAG, "onRequestVersionSuccess: " + entry);
-
-                        boolean needUpdate = needUpdate(entry.versionCode);
-                        if (checkUpdateListener != null)
-                            checkUpdateListener.needUpdate(needUpdate, entry.versionName);
-                        if (needUpdate)
-                            return UIData
-                                    .create()
-                                    .setTitle(entry.title)
-                                    .setContent(entry.desc)
-                                    .setDownloadUrl(entry.path);
-                        else return null;
-                    }
-
-                    @Override
-                    public void onRequestVersionFailure(String message) {
-                        Log.i(TAG, "onRequestVersionFailure: " + message);
-                        if (checkUpdateListener != null)
-                            checkUpdateListener.error();
-                    }
-                })
-                .setForceUpdateListener(() -> activity.finish())
-                .setDownloadAPKPath(apkPath)
-                .excuteMission(activity);
+//        AllenVersionChecker
+//                .getInstance()
+//                .requestVersion()
+//                .setRequestUrl(REQUEST_URL)
+//                .request(new RequestVersionListener() {
+//                    @Override
+//                    public UIData onRequestVersionSuccess(String result) {
+//                        entry = new Gson().fromJson(result, Entry.class);
+//                        Log.d(TAG, "onRequestVersionSuccess: " + entry);
+//
+//                        boolean needUpdate = needUpdate(entry.versionCode);
+//                        if (checkUpdateListener != null)
+//                            checkUpdateListener.needUpdate(needUpdate, entry.versionName);
+//                        if (needUpdate)
+//                            return UIData
+//                                    .create()
+//                                    .setTitle(entry.title)
+//                                    .setContent(entry.desc)
+//                                    .setDownloadUrl(entry.path);
+//                        else return null;
+//                    }
+//
+//                    @Override
+//                    public void onRequestVersionFailure(String message) {
+//                        Log.i(TAG, "onRequestVersionFailure: " + message);
+//                        if (checkUpdateListener != null)
+//                            checkUpdateListener.error();
+//                    }
+//                })
+//                .setForceUpdateListener(() -> activity.finish())
+//                .setDownloadAPKPath(apkPath)
+//                .excuteMission(activity);
 
     }
 

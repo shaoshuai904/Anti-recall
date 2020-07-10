@@ -9,8 +9,8 @@ package com.qsboy.antirecall.ui.fragment;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +18,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
-
-import static android.view.KeyEvent.KEYCODE_BACK;
 
 
 public class HelpFragment extends Fragment {

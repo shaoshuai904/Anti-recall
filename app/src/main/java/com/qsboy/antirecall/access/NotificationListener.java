@@ -42,7 +42,7 @@ public class NotificationListener extends NotificationListenerService {
         title = oTitle.toString();
         text = oText.toString();
 
-        Log.d(TAG, "Notification - : " +
+        Log.e(TAG, "Notification - : " +
                 " \npackageName: " + packageName +
                 " \nTitle      : " + title +
                 " \nText       : " + text);

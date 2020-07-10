@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  ~ Copyright © 2016 - 2018 by GitHub.com/JasonQS
-  ~ anti-recall.qsboy.com
-  ~ All Rights Reserved
-  -->
-
+<?xml version="1.0" encoding="UTF-8"?>
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
     android:accessibilityEventTypes="typeAllMask"
     android:accessibilityFeedbackType="feedbackAllMask"
@@ -11,5 +6,5 @@
     android:canRetrieveWindowContent="true"
     android:description="@string/service_label"
     android:notificationTimeout="100" />
-    <!--android:packageNames="com.tencent.mobileqq,com.tencent.mm" -->
 
+    <!--android:packageNames="com.tencent.mobileqq,com.tencent.mm" -->

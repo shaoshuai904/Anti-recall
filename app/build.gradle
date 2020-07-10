@@ -1,24 +1,13 @@
-/*
- * Copyright © 2016 - 2018 by GitHub.com/JasonQS
- * anti-recall.qsboy.com
- * All Rights Reserved
- */
-
 apply plugin: 'com.android.application'
 
 android {
-
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
-
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.qsboy.antirecall"
-        minSdkVersion 19
-        targetSdkVersion 27
-        versionCode 11
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 12
         versionName 'v5.1.5'
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -47,6 +36,17 @@ android {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // implementation files('libs/*')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
     // recyclerViewAdapter helper
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.36'
     // folding cell
@@ -59,19 +59,5 @@ dependencies {
     implementation 'br.com.simplepass:loading-button-android:1.14.0'
     // overlay permission
     implementation 'com.github.czy1121:settingscompat:1.1.4'
-    // check update
-    implementation 'com.allenliu.versionchecklib:library:2.0.5'
-    // gson
-    implementation 'com.google.code.gson:gson:2.8.5'
-    // 图表
-    // implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
-    implementation 'com.android.volley:volley:1.1.0'
-    implementation 'com.android.support:support-vector-drawable:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation files('libs/*')
+
 }

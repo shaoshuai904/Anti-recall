@@ -14,7 +14,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.alipay.sdk.app.PayTask;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -93,14 +92,14 @@ public class Pay {
                 response -> {
                     Log.i(TAG, "sendMsg: " + response);
                     Runnable payRunnable = () -> {
-                        PayTask alipay = new PayTask(activity);
-                        Map<String, String> result = alipay.payV2(response, true);
-                        Log.i("msp", result.toString());
-
-                        Message msg = new Message();
-                        msg.what = SDK_PAY_FLAG;
-                        msg.obj = result;
-                        mHandler.sendMessage(msg);
+//                        PayTask alipay = new PayTask(activity);
+//                        Map<String, String> result = alipay.payV2(response, true);
+//                        Log.i("msp", result.toString());
+//
+//                        Message msg = new Message();
+//                        msg.what = SDK_PAY_FLAG;
+//                        msg.obj = result;
+//                        mHandler.sendMessage(msg);
                     };
 
                     Thread payThread = new Thread(payRunnable);
