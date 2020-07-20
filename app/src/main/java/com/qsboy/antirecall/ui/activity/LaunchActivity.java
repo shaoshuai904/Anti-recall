@@ -1,9 +1,3 @@
-/*
- * Copyright © 2016 - 2018 by GitHub.com/JasonQS
- * anti-recall.qsboy.com
- * All Rights Reserved
- */
-
 package com.qsboy.antirecall.ui.activity;
 
 import android.content.Intent;
@@ -12,10 +6,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.qsboy.antirecall.R;
 
@@ -35,8 +30,7 @@ public class LaunchActivity extends AppCompatActivity {
             Intent intent = new Intent(LaunchActivity.this, MainActivity.class);
             startActivity(intent);
             LaunchActivity.this.finish();
-        }, App.LaunchDelayTime);
-
+        }, 500);
     }
 
     private void setImg() {
@@ -66,8 +60,7 @@ public class LaunchActivity extends AppCompatActivity {
         opts.inSampleSize = scale;
         opts.inJustDecodeBounds = false;
 
-        Bitmap bitmap =
-                BitmapFactory.decodeResource(getResources(), R.drawable.launch, opts);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.launch, opts);
 //                ImageHelper.decodeSampledBitmapFromResource(getResources(), R.drawable.start, size.x, size.y);
 
         ImageView img = findViewById(R.id.img_launch);

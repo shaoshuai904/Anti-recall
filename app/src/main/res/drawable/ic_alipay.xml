@@ -1,14 +1,8 @@
-<!--
-  ~ Copyright © 2016 - 2018 by GitHub.com/JasonQS
-  ~ anti-recall.qsboy.com
-  ~ All Rights Reserved
-  -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="32dp"
     android:height="32dp"
-    android:viewportHeight="52"
-    android:viewportWidth="52">
+    android:viewportWidth="52"
+    android:viewportHeight="52">
     <group>
         <clip-path android:pathData="M5,5h42v42h-42z M 0,0" />
         <group>

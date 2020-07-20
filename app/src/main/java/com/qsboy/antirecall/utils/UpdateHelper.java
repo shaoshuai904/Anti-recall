@@ -92,15 +92,16 @@ public class UpdateHelper {
     }
 
     private class Entry {
-
-        /**
-         * versionCode : 6
-         * versionName : v5.1.0
-         * desc : v5.1.0-release
-         * force : true
-         * path : http://cdn.qsboy.com/anti-recall/releases/anti-recall-v5.1.0.apk
-         */
-
+//    {
+//            "versionCode": "1061",
+//            "versionName": "v5.6.2",
+//            "updateContent": "Anti-recall 1 周年庆\n优惠套餐 新增永久订阅!\n官网: anti-recall.com",
+//            "updateUrl": "https://anti-recall.com/release/anti-recall-v5.6.2.apk",
+//            "updateDate": "2020-7-7",
+//            "md5": "aa8c56c7029dabca00cd9df882faed49",
+//            "forced": "true",
+//            "ignore": "true"
+//    }
         int versionCode;
         String versionName;
         String title;
